@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Minecraft Place</title>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-container">
+    <aside class="sidebar">
+      <div class="top-selection">
+        <div class="preview-wrapper">
+          <canvas id="block-preview-canvas"></canvas>
+        </div>
+        <div class="item-info">
+          <span class="item-name" id="item-name"></span>
+          <button class="pen-btn" id="dialog-open-button"><i class="fa-solid fa-pen"></i></button>
+        </div>
+        <ul class="item-properties" id="item-properties">
+        </ul>
+      </div>
+      <div class="bottom-selection">
+        <button class="twitch-login" id="twitch-login">Login with Twitch</button>
+        <!--<div class="points-display">
+          Points: <span id="points">120</span>
+        </div>-->
+      </div>
+    </aside>
+    <main class="main-area" id="main-area">
+      <canvas id="render-canvas"></canvas>
+    </main>
+  </div>
+  <div class="dialog" id="dialog">
+    <div class="dialog-content">
+        <button id="dialog-close-button"><i class="fa-solid fa-xmark"></i></button>
+        <input id="block-search-input" type="text" placeholder="Search...">
+        <ul id="block-search-results"></ul>
+    </div>
+  </div>
+  <script type="module" src="index.js"></script>
+</body>
+</html>
